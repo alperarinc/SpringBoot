@@ -14,19 +14,19 @@ public class CustumerService {
     private CustomerRepository customerRepository;
 
     public Customer addCustomer(Customer customer){
+
         return customerRepository.save(customer);
     }
     public List<Customer> findAllCustomer(){
+
         return customerRepository.findAll();
     }
     public Customer getCustomerById(Long customerId){
+
         return customerRepository.findById(customerId).get();
     }
-    public Customer deleteCustomerById(Long customerId){
+    public void deleteCustomerById(Long customerId){
+
         customerRepository.deleteById(customerId);
     }
-
-
-
-
 }
